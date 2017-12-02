@@ -14,15 +14,15 @@
 ActiveRecord::Schema.define(version: 20171014094626) do
 
   create_table "students", force: true do |t|
-    t.string   "name",       limit: nil
+    t.string   "name"
     t.date     "birthday"
-    t.string   "surname",    limit: nil
+    t.string   "surname"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "towns", force: true do |t|
-    t.string   "name",       limit: nil
+    t.string   "name"
     t.float    "lat"
     t.float    "lon"
     t.datetime "created_at"
