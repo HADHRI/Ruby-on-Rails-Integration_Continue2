@@ -1,7 +1,7 @@
 class Town < ActiveRecord::Base
   
   before_validation :load_position
-  validates :lat, :lon, presence: true
+  validates :lat, :lon, presence: true 
 
 
   private

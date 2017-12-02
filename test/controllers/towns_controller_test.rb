@@ -18,9 +18,11 @@ class TownsControllerTest < ActionController::TestCase
   end
 
   test "should create town" do
+     VCR.use_cassette("town_ok") do
     assert_difference('Town.count') do
       post :create, town: { name: @town.name }
     end
+  end
 
     assert_redirected_to town_path(assigns(:town))
   end
