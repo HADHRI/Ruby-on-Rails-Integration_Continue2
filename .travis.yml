@@ -1,6 +1,8 @@
 language: ruby
 rvm:
 - 2.3.5
+script:
+  - bundle exec rake db:migrate && bundle exec rake
 deploy:
   provider: heroku
   api_key:
